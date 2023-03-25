@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component Comprobate Snapshot of the component 1`] = `
+<h2>Hola soy el contador</h2>
+<p>1<sup>2</sup></p>
+<button>+</button>
+<button>-</button>
+<p data-id="counter">1</p>
+`;
