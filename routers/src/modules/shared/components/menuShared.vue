@@ -1,15 +1,30 @@
 <template>
   <nav>
   <ul>
-  <router-link to="/">Login</router-link>
-  <router-link to="/admin">Admin</router-link>
-  <router-link :to="{name:'producto', params:{id:1}}">productos</router-link>
+      <custom-link v-for="(link, key) of links" :key="key" :link="link"></custom-link>
   </ul>
   </nav>
 </template>
 <script>
+import { defineAsyncComponent } from 'vue';
 export default{
-  name:"menu",
+  name:"menuu",
+  data() {
+    return {
+      links:[
+        {to:"/login", name:"login", desc:"Login"},
+        {to:"/admin", name:"home", desc:"Admin"},
+        {to:{name:'producto', params:{id:1}}, desc:"Productos" },
+        {to:{name:'web',  }, desc:"web"},
+        {to:{name:'home-web', }, desc:"Home web"},
+        {to:{name:'about-web', }, desc:"About web"},
+        {to:'https://www.google.com', desc:"Google" },
+      ]
+    }
+  },
+  components:{
+    'custom-link':defineAsyncComponent(()=>import('@/modules/shared/components/customLink.vue')),
+  }
 }
 </script>
 <style scoped>
