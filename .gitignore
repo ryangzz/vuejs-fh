@@ -2,4 +2,5 @@ firts-project-vue/node_modules
 routers/node_modules
 04-pokemon-game/node_modules
 routers/node_modules
-bases-vuex/none_modules
+bases-vuex/node_modules
+journal/node_modules
